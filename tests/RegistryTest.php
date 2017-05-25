@@ -181,29 +181,29 @@ class RegistryTest extends \PHPUnit_Framework_TestCase
      */
     public function registerProvider()
     {
-        return [
-            [
-                [
-                    [
+        return array(
+            array(
+                array(
+                    array(
                         'identifier' => 'id1',
-                        'entry' => 'foo',
-                    ],
-                    [
+                        'entry' => 'foo'
+                    ),
+                    array(
                         'identifier' => 'id2',
-                        'entry' => 'bar',
-                    ],
-                    [
+                        'entry' => 'bar'
+                    ),
+                    array(
                         'identifier' => 'id3',
-                        'entry' => 'foobar',
-                    ]
-                ],
-                [
+                        'entry' => 'foobar'
+                    )
+                ),
+                array(
                     'id1' => 'foo',
                     'id2' => 'bar',
-                    'id3' => 'foobar',
-                ]
-            ]
-        ];
+                    'id3' => 'foobar'
+                )
+            )
+        );
     }
 
     /**
@@ -211,31 +211,31 @@ class RegistryTest extends \PHPUnit_Framework_TestCase
      */
     public function unregisterProvider()
     {
-        return [
-            [
-                [
-                    [
+        return array(
+            array(
+                array(
+                    array(
                         'identifier' => 'id1',
-                        'entry' => 'foo',
-                    ],
-                    [
+                        'entry' => 'foo'
+                    ),
+                    array(
                         'identifier' => 'id2',
-                        'entry' => 'bar',
-                    ],
-                    [
+                        'entry' => 'bar'
+                    ),
+                    array(
                         'identifier' => 'id3',
-                        'entry' => 'foobar',
-                    ]
-                ],
-                [
+                        'entry' => 'foobar'
+                    )
+                ),
+                array(
                     'id2',
-                ],
-                [
+                ),
+                array(
                     'id1' => 'foo',
-                    'id3' => 'foobar',
-                ]
-            ]
-        ];
+                    'id3' => 'foobar'
+                )
+            )
+        );
     }
 
 }
