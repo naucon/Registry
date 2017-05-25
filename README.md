@@ -18,7 +18,7 @@ All registred entries can be returned. A specific entry can be returned or remov
 
 ### Compatibility
 
-* PHP5.3
+* PHP5.5
 
 
 Installation
