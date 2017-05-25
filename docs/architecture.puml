@@ -1,0 +1,36 @@
+@startuml
+
+interface RegistryInterface {
+    +register($identifier, $entry)
+    +unregister($identifier)
+    +get($identifier)
+    +has($identifier)
+    +all()
+    +count()
+}
+
+RegistryInterface ..|> Countable
+
+interface Countable {
+    +count()
+}
+
+abstract class Registry {
+    + __construct(string $className)
+    +register($identifier, $entry)
+    +unregister($identifier)
+    +get($identifier)
+    +has($identifier)
+    +all()
+    +count()
+}
+
+Registry ..|> RegistryInterface
+
+interface RegistryAwareInterface {
+    +void setRegistry(RegistryInterface $registry);
+}
+
+RegistryAwareInterface --> RegistryInterface
+
+@enduml
